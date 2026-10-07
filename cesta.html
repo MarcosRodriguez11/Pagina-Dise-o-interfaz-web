@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProte - Mi Cesta de Compra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE AVISOS -->
+    <div class="top-bar">⚡ COMPRA SEGURA & GARANTÍA DE DEVOLUCIÓN EN 30 DÍAS ⚡</div>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="main-header">
+        <a href="index.html" class="logo">⚡ MyProte</a>
+        <nav class="nav-links">
+            <a href="cuenta.html">👤 Mi cuenta</a>
+            <a href="cesta.html" class="active">🛒 Mi cesta <span class="badge-count">3</span></a>
+        </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="layout-container">
+        
+        <!-- BARRA LATERAL / SIDEBAR -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Categorías</h3>
+            <ul>
+                <li><a href="index.html">Nutrición deportiva <span>(8)</span></a></li>
+                <li><a href="#">Bienestar <span>(12)</span></a></li>
+                <li><a href="#">Alimentación saludable <span>(15)</span></a></li>
+                <li><a href="#">Accesorios <span>(6)</span></a></li>
+                <li><a href="#">Top ventas 🔥</a></li>
+                <li><a href="#">Novedades ✨</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL DE LA CESTA -->
+        <main class="main-content">
+            
+            <!-- INDICADOR DE PASOS -->
+            <div class="checkout-steps">
+                <div class="step active">
+                    <span class="step-num">1</span>
+                    <span class="step-text">Cesta</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <span class="step-text">Envío</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <span class="step-text">Pago</span>
+                </div>
+            </div>
+
+            <!-- TÍTULO DE LA PÁGINA -->
+            <div class="cart-header-title">
+                <h1 class="brand-title">Tu Cesta de Compra <span>(3 productos)</span></h1>
+                <a href="index.html" class="continue-shopping">← Seguir comprando</a>
+            </div>
+
+            <!-- BARRA DE ENVÍO GRATIS -->
+            <div class="free-shipping-banner">
+                <p>🎉 ¡Enhorabuena! Has alcanzado el <strong>ENVÍO GRATIS</strong></p>
+                <div class="shipping-progress-bar">
+                    <div class="shipping-progress-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+
+            <!-- DISPOSICIÓN EN 2 COLUMNAS (PRODUCTOS + RESUMEN) -->
+            <div class="cart-wrapper">
+                
+                <!-- COLUMNA IZQUIERDA: LISTA DE PRODUCTOS -->
+                <div class="cart-left-column">
+                    <div class="cart-list">
+                        
+                        <!-- PRODUCTO 1 -->
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <img src="imagenes/p1.webp" alt="Proteína sabor galletas">
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-title"><a href="detalle.html">Proteína Concentrada Sabor Galletas</a></h3>
+                                    <span class="cart-item-variant">Formato: 1kg | Sabor: Galleta María</span>
+                                    <span class="stock-badge">In Stock (Entrega mañana)</span>
+                                </div>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn">-</button>
+                                    <input type="number" class="qty-input" value="1" min="1" max="10">
+                                    <button type="button" class="qty-btn">+</button>
+                                </div>
+                                <div class="price-container">
+                                    <span class="cart-item-price">20,00€</span>
+                                </div>
+                                <button type="button" class="btn-remove-item" title="Eliminar producto">🗑️</button>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCTO 2 -->
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <img src="imagenes/p5.webp" alt="Creatina en polvo">
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-title"><a href="detalle.html">Creatina Monohidratada Ultra Pura</a></h3>
+                                    <span class="cart-item-variant">Formato: 500g | Neutro</span>
+                                    <span class="stock-badge">In Stock</span>
+                                </div>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn">-</button>
+                                    <input type="number" class="qty-input" value="2" min="1" max="10">
+                                    <button type="button" class="qty-btn">+</button>
+                                </div>
+                                <div class="price-container">
+                                    <span class="cart-item-price">50,00€</span>
+                                    <span class="unit-price">(25,00€/ud)</span>
+                                </div>
+                                <button type="button" class="btn-remove-item" title="Eliminar producto">🗑️</button>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCTO 3 -->
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <img src="imagenes/p8.webp" alt="Proteína Shake RTD">
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-title"><a href="detalle.html">Proteína Shake RTD (Pack de 6)</a></h3>
+                                    <span class="cart-item-variant">Sabor: Vainilla Cream</span>
+                                    <span class="stock-badge">In Stock</span>
+                                </div>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn">-</button>
+                                    <input type="number" class="qty-input" value="1" min="1" max="10">
+                                    <button type="button" class="qty-btn">+</button>
+                                </div>
+                                <div class="price-container">
+                                    <span class="cart-item-price">20,00€</span>
+                                </div>
+                                <button type="button" class="btn-remove-item" title="Eliminar producto">🗑️</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- MÓDULO DE CÓDIGO PROMOCIONAL -->
+                    <div class="promo-code-card">
+                        <label for="coupon">¿Tienes un cupón de descuento?</label>
+                        <div class="promo-input-group">
+                            <input type="text" id="coupon" placeholder="Ej. MYPROTE10" class="promo-input">
+                            <button type="button" class="btn-apply-coupon">Aplicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: FORMULARIO Y RESUMEN DE PAGO -->
+                <div class="cart-right-column">
+                    <form class="checkout-card" action="#" method="POST">
+                        <h3>Resumen del Pedido</h3>
+
+                        <div class="order-summary-row">
+                            <span>Subtotal productos</span>
+                            <span>90,00€</span>
+                        </div>
+
+                        <div class="order-summary-row">
+                            <span>Descuento aplicado (10%)</span>
+                            <span class="discount-text">-9,00€</span>
+                        </div>
+
+                        <div class="order-summary-row">
+                            <span>Gastos de envío</span>
+                            <span class="free-shipping-text">GRATIS</span>
+                        </div>
+
+                        <div class="order-summary-row total">
+                            <span>Total (IVA incl.)</span>
+                            <span class="total-amount">81,00€</span>
+                        </div>
+
+                        <!-- DATOS DE ENVÍO -->
+                        <div class="checkout-section-title">📍 Datos de Envío</div>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Marcos Rodríguez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion">Dirección de entrega:</label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Calle Ejemplo, 12, 3ºB" required>
+                        </div>
+
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="cp">Código Postal:</label>
+                                <input type="text" id="cp" name="cp" placeholder="14001" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ciudad">Ciudad:</label>
+                                <input type="text" id="ciudad" name="ciudad" placeholder="Córdoba" required>
+                            </div>
+                        </div>
+
+                        <!-- SELECCIÓN DE MÉTODO DE PAGO GRÁFICO -->
+                        <div class="checkout-section-title">💳 Método de Pago</div>
+
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="pago" value="tarjeta" checked>
+                                <span class="payment-box">
+                                    <span class="payment-icon">💳</span>
+                                    <span class="payment-label">Tarjeta</span>
+                                </span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="pago" value="bizum">
+                                <span class="payment-box">
+                                    <span class="payment-icon">📱</span>
+                                    <span class="payment-label">Bizum</span>
+                                </span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="pago" value="paypal">
+                                <span class="payment-box">
+                                    <span class="payment-icon">🅿️</span>
+                                    <span class="payment-label">PayPal</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-buy">
+                            🔒 Tramitar Pedido (81,00€)
+                        </button>
+
+                        <!-- SELLOS DE CONFIANZA -->
+                        <div class="trust-badges">
+                            <div class="trust-item">
+                                <span class="trust-icon">🔒</span>
+                                <span>Pago 100% Seguro</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">🚚</span>
+                                <span>Entrega 24/48h</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">🔄</span>
+                                <span>30 Días Devolución</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        © 2026 <span>MyProte</span> - Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>

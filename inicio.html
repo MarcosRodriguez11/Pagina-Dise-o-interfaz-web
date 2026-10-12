@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProte - Bienvenidos a la Nutrición Deportiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE AVISOS -->
+    <div class="top-bar">⚡ ENVÍO GRATIS EN PEDIDOS SUPERIORES A 40€ | ENTREGA EN 24H ⚡</div>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="main-header">
+        <a href="inicio.html" class="logo">⚡ MyProte</a>
+        <nav class="nav-links">
+            <a href="inicio.html" class="active">🏠 Inicio</a>
+            <a href="index.html">📦 Catálogo</a>
+            <a href="cuenta.html">👤 Mi cuenta</a>
+            <a href="cesta.html">🛒 Mi cesta <span class="badge-count">3</span></a>
+        </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="layout-container">
+        
+        <!-- BARRA LATERAL / SIDEBAR -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Categorías</h3>
+            <ul>
+                <li><a href="index.html">Nutrición deportiva <span>(8)</span></a></li>
+                <li><a href="index.html">Bienestar <span>(12)</span></a></li>
+                <li><a href="index.html">Alimentación saludable <span>(15)</span></a></li>
+                <li><a href="index.html">Accesorios <span>(6)</span></a></li>
+                <li><a href="index.html">Top ventas 🔥</a></li>
+                <li><a href="index.html">Novedades ✨</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL DE LA HOME -->
+        <main class="main-content">
+            
+            <!-- SECCIÓN HERO / BANNER PRINCIPAL -->
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1>Alcanza Tus Metas con <span>MyProte</span></h1>
+                    <p>La mejor selección de proteínas, creatina y suplementos de máxima calidad para potenciar tu rendimiento físico y recuperación muscular.</p>
+                    <div class="hero-buttons">
+                        <a href="index.html" class="btn-primary-hero">Ver Catálogo Completo</a>
+                        <a href="detalle.html" class="btn-secondary-hero">Producto Destacado ✨</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE CARACTERÍSTICAS / VENTAJAS -->
+            <section class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Envío Rápido 24/48h</h3>
+                    <p>Recibe tus suplementos favoritos directamente en casa sin demoras.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💯</span>
+                    <h3>Máxima Pureza</h3>
+                    <p>Fórmulas científicamente probadas y certificadas para un rendimiento óptimo.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Pago 100% Seguro</h3>
+                    <p>Compra con total tranquilidad usando Tarjeta, Bizum o PayPal.</p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
+            <div style="margin-top: 40px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h2 class="brand-title">Destacados de la Semana</h2>
+                <a href="index.html" style="color: var(--primary-dark); font-weight: 600; font-size: 0.95rem;">Ver todos →</a>
+            </div>
+
+            <section class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">Top Ventas</span>
+                    <a href="detalle.html"><img src="imagenes/p1.webp" alt="Proteína sabor galletas"></a>
+                    <div class="product-info">
+                        <div class="product-rating">★★★★★ (48)</div>
+                        <h3 class="product-title"><a href="detalle.html">Proteína sabor galletas</a></h3>
+                        <div class="product-price-row">
+                            <div><span class="price">20,00€</span><span class="old-price">25,00€</span></div>
+                            <a href="cesta.html" class="btn-add-cart">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Popular</span>
+                    <a href="detalle.html"><img src="imagenes/p5.webp" alt="Creatina en polvo"></a>
+                    <div class="product-info">
+                        <div class="product-rating">★★★★★ (112)</div>
+                        <h3 class="product-title"><a href="detalle.html">Creatina en polvo (500g)</a></h3>
+                        <div class="product-price-row">
+                            <div><span class="price">25,00€</span></div>
+                            <a href="cesta.html" class="btn-add-cart">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="detalle.html"><img src="imagenes/p7.webp" alt="Proteína sabor crema"></a>
+                    <div class="product-info">
+                        <div class="product-rating">★★★★☆ (24)</div>
+                        <h3 class="product-title"><a href="detalle.html">Proteína sabor crema</a></h3>
+                        <div class="product-price-row">
+                            <div><span class="price">21,00€</span></div>
+                            <a href="cesta.html" class="btn-add-cart">+</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        © 2026 <span>MyProte</span> - Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>

@@ -958,3 +958,88 @@ a {
     color: var(--primary-color);
     font-weight: 700;
 }
+
+/* Estilos para la sección multimedia */
+.seccion-multimedia {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.seccion-multimedia h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.media-container {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.media-container h3 {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Asegurar que el vídeo sea responsive */
+.media-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustar el reproductor de audio */
+.media-container audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* ==========================================
+   PUNTO 3: ESTILOS RESPONSIVE (MEDIA QUERIES)
+   ========================================== */
+
+/* --- EJEMPLO 1: Adaptación de la cuadrícula de productos en Tablets y Móviles --- */
+/* Por defecto en PC se ven varios productos en línea. En pantallas menores a 900px, reducimos columnas. */
+@media screen and (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Pasa de 4 o 3 columnas a solo 2 */
+    }
+}
+
+/* En móviles (pantallas menores a 600px), los productos se muestran en una sola columna */
+@media screen and (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr !important; /* 1 sola columna para aprovechar la pantalla */
+    }
+}
+
+/* --- EJEMPLO 2: Reestructuración del Layout principal (Sidebar y Contenido) --- */
+/* En ordenadores se muestra la barra lateral al lado. En tablets/móviles (< 768px), la apilamos verticalmente. */
+@media screen and (max-width: 768px) {
+    .layout-container {
+        flex-direction: column !important; /* Cambia la distribución de horizontal a vertical */
+    }
+
+    .sidebar {
+        width: 100% !important; /* La barra lateral ocupa todo el ancho superior */
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        width: 100% !important; /* El contenido principal pasa a ocupar todo el ancho */
+    }
+    
+    /* Ajuste extra para la barra superior en móviles */
+    .top-bar {
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+}

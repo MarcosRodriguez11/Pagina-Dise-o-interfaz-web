@@ -21,6 +21,7 @@
             <a href="index.html">📦 Catálogo</a>
             <a href="cuenta.html">👤 Mi cuenta</a>
             <a href="cesta.html" class="active">🛒 Mi cesta <span class="badge-count">3</span></a>
+            <a href="login.html">🔑 Entrar</a>
         </nav>
     </header>
 
@@ -144,7 +145,7 @@
                 </div>
 
                 <div class="cart-right-column">
-                    <form class="checkout-card" action="#" method="POST">
+                    <form class="checkout-card" id="form-pago">
                         <h3>Resumen del Pedido</h3>
 
                         <div class="order-summary-row"><span>Subtotal productos</span><span>90,00€</span></div>
@@ -206,6 +207,29 @@
     <footer class="main-footer">
                 <a href="https://github.com/MarcosRodriguez11/Pagina-Dise-o-interfaz-web">MyProte</a> © 2026 by <a href="https://github.com/MarcosRodriguez11">Marcos Rodriguez</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
     </footer>
+
+    <!-- MODAL DE PEDIDO CONFIRMADO -->
+    <dialog class="modal-pago" id="modal-pago" aria-labelledby="modal-titulo">
+        <span class="modal-icon">✅</span>
+        <h2 id="modal-titulo">¡Pedido realizado!</h2>
+        <p>Gracias por tu compra. Te hemos enviado un correo con los datos del pedido.</p>
+        <p class="modal-total">Total pagado: <strong>81,00€</strong></p>
+        <div class="modal-buttons">
+            <a href="inicio.html" class="btn-buy">Volver al inicio</a>
+            <button type="button" class="btn-modal-close" id="cerrar-modal">Cerrar</button>
+        </div>
+    </dialog>
+
+    <script>
+        const form = document.getElementById('form-pago');
+        const modal = document.getElementById('modal-pago');
+        // Al pagar no se cambia de página: se abre el modal
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            modal.showModal();
+        });
+        document.getElementById('cerrar-modal').addEventListener('click', () => modal.close());
+    </script>
 
 </body>
 </html>

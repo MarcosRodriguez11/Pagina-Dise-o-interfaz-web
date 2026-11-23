@@ -1110,6 +1110,7 @@ a {
 
 /* ===== MODAL DE PAGO ===== */
 .modal-pago {
+    margin: auto;
     max-width: 420px;
     width: 90%;
     padding: 32px 28px;
@@ -1186,3 +1187,70 @@ a {
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+
+/* ===== MEJORAS DE DISEÑO ===== */
+
+/* Modal: más bonito */
+.modal-pago { border-top: 6px solid var(--primary-color); }
+.modal-icon { display: block; animation: latido 1.6s ease-in-out infinite; }
+@keyframes latido { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+.btn-modal-close:focus-visible, .modal-buttons .btn-buy:focus-visible { outline: 3px solid var(--primary-light); outline-offset: 2px; }
+
+/* Multimedia: tarjeta con vídeo grande y audio como reproductor debajo */
+.seccion-multimedia {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 28px;
+    margin: 30px 0;
+    font-family: inherit;
+}
+.seccion-multimedia h2 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.seccion-multimedia h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    background: var(--primary-color);
+}
+.media-container { margin-bottom: 20px; }
+.media-container h3 {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.media-container video {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    background: #0f172a;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+.media-container:last-child {
+    margin-bottom: 0;
+    padding: 16px;
+    border-radius: var(--radius);
+    background: var(--primary-light);
+}
+.media-container audio { width: 100%; max-width: 100%; }
+
+/* Login y registro: más aire y color */
+.auth-wrapper {
+    min-height: 70vh;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-light), transparent 60%);
+}
+.auth-card { border-top: 6px solid var(--primary-color); }
+.auth-card .btn-buy { width: 100%; margin-top: 6px; }
+.form-row-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 520px) { .form-row-2col { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .modal-icon { animation: none; } }

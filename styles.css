@@ -1107,3 +1107,82 @@ a {
     to   { opacity: 1; transform: translateY(0); }
 }
 
+
+/* ===== MODAL DE PAGO ===== */
+.modal-pago {
+    max-width: 420px;
+    width: 90%;
+    padding: 32px 28px;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    background: white;
+    color: var(--text-main);
+    text-align: center;
+}
+.modal-pago[open] { animation: aparecer .4s ease-out; }
+.modal-pago::backdrop { background: rgba(15, 23, 42, .6); }
+.modal-icon { font-size: 3rem; }
+.modal-pago h2 { color: var(--primary-dark); margin: 10px 0; }
+.modal-pago p { color: var(--text-muted); }
+.modal-total { margin: 16px 0; }
+.modal-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.modal-buttons .btn-buy { display: block; text-decoration: none; }
+.btn-modal-close {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--bg-light);
+    color: var(--text-main);
+    font: inherit;
+    cursor: pointer;
+}
+.btn-modal-close:hover { background: var(--primary-light); }
+
+
+/* ===== LOGIN Y REGISTRO ===== */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 32px 28px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    animation: aparecer .6s ease-out both;
+}
+.auth-card .brand-title { text-align: center; margin-bottom: 4px; }
+.auth-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 24px; }
+.auth-card .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+.auth-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.auth-check input { accent-color: var(--primary-color); }
+.auth-footer { text-align: center; margin-top: 18px; font-size: 0.9rem; color: var(--text-muted); }
+.auth-footer a { color: var(--primary-dark); font-weight: 600; }
+
+/* ===== MODAL DE AVISO (inicio) ===== */
+.modal-aviso .modal-code {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--radius);
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 700;
+    letter-spacing: 1px;
+}

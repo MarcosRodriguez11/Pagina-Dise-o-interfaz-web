@@ -23,6 +23,7 @@
             <a href="index.html">📦 Catálogo</a>
             <a href="cuenta.html">👤 Mi cuenta</a>
             <a href="cesta.html">🛒 Mi cesta <span class="badge-count">3</span></a>
+            <a href="login.html">🔑 Entrar</a>
         </nav>
     </header>
 
@@ -139,6 +140,28 @@
     <footer class="main-footer">
         <a href="https://github.com/MarcosRodriguez11/Pagina-Dise-o-interfaz-web">MyProte</a> © 2026 by <a href="https://github.com/MarcosRodriguez11">Marcos Rodriguez</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
     </footer>
+
+    <!-- MODAL DE AVISO: sale al entrar en la web -->
+    <dialog class="modal-pago modal-aviso" id="modal-aviso" aria-labelledby="aviso-titulo">
+        <span class="modal-icon">🎉</span>
+        <h2 id="aviso-titulo">¡Oferta de bienvenida!</h2>
+        <p>Usa este código en tu cesta y llévate un 10% de descuento:</p>
+        <p class="modal-total"><span class="modal-code">MYPROTE10</span></p>
+        <div class="modal-buttons">
+            <a href="registro.html" class="btn-buy">Crear mi cuenta</a>
+            <button type="button" class="btn-modal-close" id="cerrar-aviso">Ahora no</button>
+        </div>
+    </dialog>
+
+    <script>
+        const aviso = document.getElementById('modal-aviso');
+        // Solo se muestra una vez por visita
+        if (!sessionStorage.getItem('avisoVisto')) {
+            aviso.showModal();
+            sessionStorage.setItem('avisoVisto', 'si');
+        }
+        document.getElementById('cerrar-aviso').addEventListener('click', () => aviso.close());
+    </script>
 
 </body>
 </html>

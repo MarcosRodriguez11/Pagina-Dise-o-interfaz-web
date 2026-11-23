@@ -1254,3 +1254,50 @@ a {
 .form-row-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 520px) { .form-row-2col { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .modal-icon { animation: none; } }
+
+/* ===== MÁS DETALLES ===== */
+.stats-band {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 30px 0;
+    padding: 26px 20px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: white;
+    text-align: center;
+}
+.stat strong { display: block; font-size: 2rem; }
+.stat span { font-size: .9rem; opacity: .9; }
+.testimonios { margin-top: 40px; }
+.testimonios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 16px; }
+.testimonios blockquote {
+    margin: 0; padding: 20px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+.testimonios cite { display: block; margin-top: 10px; font-style: normal; font-weight: 600; color: var(--primary-dark); }
+.newsletter {
+    margin: 40px 0 10px; padding: 32px 20px; text-align: center;
+    border-radius: var(--radius); background: var(--primary-light);
+}
+.newsletter h2 { color: var(--primary-dark); margin-bottom: 6px; }
+.newsletter form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+.newsletter input { padding: 12px 14px; min-width: 260px; border: 1px solid var(--border-color); border-radius: var(--radius); font: inherit; }
+.newsletter .btn-buy { width: auto; padding: 12px 24px; }
+.news-ok { margin-top: 14px; font-weight: 600; color: var(--primary-dark); }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+#btn-subir {
+    position: fixed; right: 22px; bottom: 22px; z-index: 50;
+    width: 46px; height: 46px; border: none; border-radius: 50%;
+    background: var(--primary-color); color: white; font-size: 1.4rem; cursor: pointer;
+    box-shadow: var(--shadow-lg);
+}
+#btn-subir[hidden] { display: none; }
+#btn-subir:hover { background: var(--primary-dark); }
+@media (max-width: 700px) { .stats-band { grid-template-columns: repeat(2, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }

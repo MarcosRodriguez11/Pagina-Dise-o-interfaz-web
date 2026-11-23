@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -87,6 +87,14 @@
                 </div>
             </section>
 
+
+            <!-- ESTADÍSTICAS -->
+            <section class="stats-band" aria-label="MyProte en cifras">
+                <div class="stat"><strong data-contar="12000">0</strong><span>Clientes felices</span></div>
+                <div class="stat"><strong data-contar="150">0</strong><span>Productos</span></div>
+                <div class="stat"><strong data-contar="24">0</strong><span>Horas de entrega</span></div>
+                <div class="stat"><strong data-contar="98">0</strong><span>% de valoraciones 5★</span></div>
+            </section>
             <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
             <div style="margin-top: 40px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
                 <h2 class="brand-title">Destacados de la Semana</h2>
@@ -133,6 +141,27 @@
                 </div>
             </section>
 
+
+            <!-- OPINIONES -->
+            <section class="testimonios">
+                <h2 class="brand-title">Lo que dicen <span>nuestros clientes</span></h2>
+                <div class="testimonios-grid reveal">
+                    <blockquote><p>"La creatina llegó en 24 horas y la calidad es top."</p><cite>— Laura M. ★★★★★</cite></blockquote>
+                    <blockquote><p>"El sabor galleta es el mejor que he probado. Repetiré."</p><cite>— Carlos R. ★★★★★</cite></blockquote>
+                    <blockquote><p>"Buen precio y el código de bienvenida funciona de verdad."</p><cite>— Ana P. ★★★★☆</cite></blockquote>
+                </div>
+            </section>
+
+            <!-- NEWSLETTER -->
+            <section class="newsletter reveal">
+                <h2>📩 Recibe ofertas exclusivas</h2>
+                <p>Apúntate y te avisamos de las novedades y descuentos.</p>
+                <form id="form-news">
+                    <input type="email" placeholder="tucorreo@ejemplo.com" aria-label="Correo electrónico" required>
+                    <button type="submit" class="btn-buy">Apuntarme</button>
+                </form>
+                <p class="news-ok" id="news-ok" hidden>¡Gracias! Te has apuntado correctamente ✅</p>
+            </section>
         </main>
     </div>
 
@@ -163,5 +192,7 @@
         document.getElementById('cerrar-aviso').addEventListener('click', () => aviso.close());
     </script>
 
+    <button type="button" id="btn-subir" aria-label="Volver arriba" hidden>↑</button>
+    <script src="mejoras.js"></script>
 </body>
 </html>
